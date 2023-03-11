@@ -2,8 +2,6 @@
 import PropTypes from 'prop-types';
 import css from './Statistics.module.css';
 
-// TODO: Styles
-
 // Template of data created by input:
 export const Statistics = ({ title, stats }) => {
   return (

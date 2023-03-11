@@ -2,7 +2,8 @@
 import PropTypes from 'prop-types';
 import css from './TransationHistory.module.css';
 
-// TODO: Styles
+// Import components
+import { Transactions } from './Components/Transactions';
 
 // Template of data created by input:
 export const TransactionHistory = ({ transactions }) => {
@@ -17,20 +18,11 @@ export const TransactionHistory = ({ transactions }) => {
       </thead>
 
       <tbody>
-        {transactions.map(transaction => (
-          <tr key={transaction.id} className={css.row}>
-            <td className={css.item}>{transaction.type}</td>
-            <td className={css.item}>{transaction.amount}</td>
-            <td className={css.item}>{transaction.currency}</td>
-          </tr>
-        ))}
+        <Transactions history={transactions} />
       </tbody>
     </table>
   );
 };
-
-// Default if no data:
-// TransationHistory.defaultProps = {};
 
 // Default expected proptypes of data. In stats I need array of objects
 TransactionHistory.propTypes = {
@@ -43,5 +35,3 @@ TransactionHistory.propTypes = {
     })
   ),
 };
-// exporting file to could use in other
-// export default TransactionHistory;

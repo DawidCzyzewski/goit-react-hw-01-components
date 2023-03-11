@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import css from './FriendList.module.css';
 import { FriendItem } from './Item/FriendItem';
 
-// TODO: Styles
-
 // Template of data created by input:
 export const FriendList = ({ friends }) => {
   return (
@@ -21,7 +19,7 @@ export const FriendList = ({ friends }) => {
   );
 };
 
-// Default expected proptypes of data. In stats I need array of objects
+// Default expected proptypes of data. In stats it's need array of objects
 FriendList.propTypes = {
   friends: PropTypes.arrayOf(
     PropTypes.exact({
@@ -32,6 +30,3 @@ FriendList.propTypes = {
     })
   ),
 };
-
-// exporting file to could use in other
-// export default FriendList;
