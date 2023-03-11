@@ -34,9 +34,8 @@ export const TransactionHistory = ({ transactions }) => {
 
 // Default expected proptypes of data. In stats I need array of objects
 TransactionHistory.propTypes = {
-  transactions: PropTypes.array,
   transactions: PropTypes.arrayOf(
-    PropTypes.shape({
+    PropTypes.exact({
       id: PropTypes.string,
       type: PropTypes.string,
       amount: PropTypes.string,
