@@ -5,16 +5,18 @@ import css from './Statistics.module.css';
 // TODO: Styles
 
 // Template of data created by input:
-const Statistics = ({ title, stats }) => {
+export const Statistics = ({ title, stats }) => {
   return (
     <section className={css.statistics}>
       {title && <h2 className={css.title}>{title}</h2>}
       <ul className={css.statList}>
         {stats.map(object => {
+          const { id, label, percentage } = object;
+
           return (
-            <li className={css.item} key={object.id}>
-              <span className={css.label}>{object.label}</span>
-              <span className={css.percentage}>{object.percentage}%</span>
+            <li className={css.item} key={id}>
+              <span className={css.label}>{label}</span>
+              <span className={css.percentage}>{percentage}%</span>
             </li>
           );
         })}
@@ -39,6 +41,3 @@ Statistics.propTypes = {
     })
   ),
 };
-
-// exporting file to could use in other
-export default Statistics;

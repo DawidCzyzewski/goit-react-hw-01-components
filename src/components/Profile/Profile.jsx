@@ -2,10 +2,13 @@
 import PropTypes from 'prop-types';
 import css from './Profile.module.css';
 
+// Import components
+import { ProfileInfo } from './Components/ProfileInfo';
+
 // TODO: styles CSS
 
-// Template of data created by input:
-const Profile = ({ username, tag, location, avatar, stats }) => {
+// create template for data from output:
+export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <div className={css.profile}>
       <div className={css.description}>
@@ -16,25 +19,12 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
       </div>
 
       <ul className={css.stats}>
-        <li>
-          <span className={css.label}>Followers</span>
-          <span className={css.quantity}>{stats.followers}</span>
-        </li>
-        <li>
-          <span className={css.label}>Views</span>
-          <span className={css.quantity}>{stats.views}</span>
-        </li>
-        <li>
-          <span className={css.label}>Likes</span>
-          <span className={css.quantity}>{stats.likes}</span>
-        </li>
+        <ProfileInfo stats={stats} />
       </ul>
     </div>
   );
 };
 
-// TODO:
-// Add default props to include if no data:
 Profile.defaultProps = {
   username: 'No username',
   location: 'No location',
@@ -53,6 +43,3 @@ Profile.propTypes = {
     likes: PropTypes.number,
   }),
 };
-
-// exporting file to could use in other
-export default Profile;

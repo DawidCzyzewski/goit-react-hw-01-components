@@ -1,12 +1,12 @@
 // Import necessary elements
 import PropTypes from 'prop-types';
 import css from './FriendList.module.css';
-import FriendItem from './Item/FriendItem';
+import { FriendItem } from './Item/FriendItem';
 
 // TODO: Styles
 
 // Template of data created by input:
-const FriendList = ({ friends }) => {
+export const FriendList = ({ friends }) => {
   return (
     <ul className={css.friendList}>
       {friends.map(item => (
@@ -34,4 +34,4 @@ FriendList.propTypes = {
 };
 
 // exporting file to could use in other
-export default FriendList;
+// export default FriendList;

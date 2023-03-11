@@ -5,11 +5,11 @@ import css from './TransationHistory.module.css';
 // TODO: Styles
 
 // Template of data created by input:
-const TransactionHistory = ({ transactions }) => {
+export const TransactionHistory = ({ transactions }) => {
   return (
     <table className={css['transaction-history']}>
       <thead>
-        <tr>
+        <tr className={css.row}>
           <th className={css.header}>Type</th>
           <th className={css.header}>Amount</th>
           <th className={css.header}>Currency</th>
@@ -18,7 +18,7 @@ const TransactionHistory = ({ transactions }) => {
 
       <tbody>
         {transactions.map(transaction => (
-          <tr key={transaction.id}>
+          <tr key={transaction.id} className={css.row}>
             <td className={css.item}>{transaction.type}</td>
             <td className={css.item}>{transaction.amount}</td>
             <td className={css.item}>{transaction.currency}</td>
@@ -45,4 +45,4 @@ TransactionHistory.propTypes = {
   ),
 };
 // exporting file to could use in other
-export default TransactionHistory;
+// export default TransactionHistory;

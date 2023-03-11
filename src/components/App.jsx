@@ -1,8 +1,8 @@
 // Import Profile data
-import Profile from './Profile/Profile';
-import Statistics from './Statistics/Statistics';
-import FriendList from './FriendList/FriendList';
-import TransactionHistory from './TransationHistory/TransationHistory';
+import { Profile } from './Profile/Profile';
+import { Statistics } from './Statistics/Statistics';
+import { FriendList } from './FriendList/FriendList';
+import { TransactionHistory } from './TransationHistory/TransationHistory';
 
 // Import data files
 import user from '../data/user.json';

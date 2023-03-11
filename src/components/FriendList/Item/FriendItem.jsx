@@ -3,7 +3,7 @@ import css from './FriendItem.module.css';
 import PropTypes from 'prop-types';
 
 // Create one friend template
-const FriendItem = ({ avatar, name, isOnline }) => {
+export const FriendItem = ({ avatar, name, isOnline }) => {
   return (
     <li className={css.item}>
       <span className={isOnline ? css.online : css.offline}></span>
@@ -30,5 +30,3 @@ FriendItem.propTypes = {
     })
   ),
 };
-
-export default FriendItem;
