@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import css from './Profile.module.css';
 
 // Import components
+import { UserInfo } from './Components/UserInfo';
 import { ProfileInfo } from './Components/ProfileInfo';
+import { ProfileImage } from './Components/ProfileImage';
 
 // TODO: styles CSS
 
@@ -12,10 +14,8 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <div className={css.profile}>
       <div className={css.description}>
-        <img src={avatar} alt="User avatar" className={css.avatar} />
-        <p className={css.name}>{username}</p>
-        <p className={css.tag}>@{tag}</p>
-        <p className={css.location}>{location}</p>
+        <ProfileImage image={avatar} />
+        <UserInfo username={username} tag={tag} location={location} />
       </div>
 
       <ul className={css.stats}>
@@ -23,12 +23,6 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
       </ul>
     </div>
   );
-};
-
-Profile.defaultProps = {
-  username: 'No username',
-  location: 'No location',
-  avatar: 'https://cdn-icons-png.flaticon.com/512/1077/1077114.png',
 };
 
 // Default expected proptypes of data:

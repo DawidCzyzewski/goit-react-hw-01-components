@@ -1,4 +1,5 @@
 import css from '../Profile.module.css';
+import PropTypes from 'prop-types';
 
 // Function Statistics get stats and create list of them
 export const ProfileInfo = ({ stats }) => {
@@ -19,4 +20,10 @@ export const ProfileInfo = ({ stats }) => {
       </li>
     </>
   );
+};
+
+ProfileInfo.propTypes = {
+  followers: PropTypes.number,
+  views: PropTypes.number,
+  likes: PropTypes.number,
 };
