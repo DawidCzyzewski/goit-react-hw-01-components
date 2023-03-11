@@ -6,7 +6,7 @@ import FriendList from './FriendList/FriendList';
 // Import data files
 import user from '../data/user.json';
 import data from '../data/data.json';
-import friends from 'path/to/friends.json';
+import friends from '../data/friends.json';
 
 export const App = () => {
   return (
