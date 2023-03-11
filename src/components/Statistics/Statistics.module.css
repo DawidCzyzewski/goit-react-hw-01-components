@@ -1,0 +1,9 @@
+.statList {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+}

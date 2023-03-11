@@ -4,7 +4,7 @@ import css from './Profile.module.css';
 
 // TODO: styles CSS
 
-// Template of created by input data:
+// Template of data created by input:
 const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <div className={css.profile}>
@@ -33,6 +33,14 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
   );
 };
 
+// TODO:
+// Add default props to include if no data:
+Profile.defaultProps = {
+  username: 'No username',
+  location: 'No location',
+  avatar: 'https://cdn-icons-png.flaticon.com/512/1077/1077114.png',
+};
+
 // Default expected proptypes of data:
 Profile.propTypes = {
   username: PropTypes.string.isRequired,
@@ -46,4 +54,5 @@ Profile.propTypes = {
   }),
 };
 
+// exporting file to could use in other
 export default Profile;
