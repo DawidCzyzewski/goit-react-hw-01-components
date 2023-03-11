@@ -1,7 +1,8 @@
+// Import necessary elements
 import css from '../Profile.module.css';
 import PropTypes from 'prop-types';
 
-// Function Statistics get stats and create list of them
+// Profile informations element
 export const ProfileInfo = ({ stats }) => {
   const { followers, views, likes } = stats;
   return (
@@ -22,6 +23,7 @@ export const ProfileInfo = ({ stats }) => {
   );
 };
 
+// Expected types of props
 ProfileInfo.propTypes = {
   followers: PropTypes.number,
   views: PropTypes.number,

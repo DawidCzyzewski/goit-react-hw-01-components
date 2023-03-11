@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import css from '../Profile.module.css';
 
-// Function Statistics get stats and create list of them
+// User info element
 export const UserInfo = ({ username, tag, location }) => {
   return (
     <>
@@ -13,11 +13,13 @@ export const UserInfo = ({ username, tag, location }) => {
   );
 };
 
+// Default props if no data from backend
 UserInfo.defaultProps = {
   username: 'No username',
   location: 'No location',
 };
 
+// Expected types of props
 UserInfo.propTypes = {
   username: PropTypes.string.isRequired,
   tag: PropTypes.string,

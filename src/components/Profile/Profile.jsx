@@ -7,8 +7,6 @@ import { UserInfo } from './Components/UserInfo';
 import { ProfileInfo } from './Components/ProfileInfo';
 import { ProfileImage } from './Components/ProfileImage';
 
-// TODO: styles CSS
-
 // create template for data from output:
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
