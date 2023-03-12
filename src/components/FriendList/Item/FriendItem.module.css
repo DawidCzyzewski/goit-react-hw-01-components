@@ -9,15 +9,19 @@
   max-width: 600px;
 }
 .online {
-  width: 10px;
-  height: 10px;
+  width: 2vw;
+  max-width: 10px;
+  height: 2vw;
+  max-height: 10px;
   background-color: green;
   border-radius: 50%;
   margin: 15px;
 }
 .offline {
-  width: 10px;
-  height: 10px;
+  width: 2vw;
+  max-width: 10px;
+  height: 2vw;
+  max-height: 10px;
   background-color: red;
   border-radius: 50%;
   margin: 15px;
@@ -26,6 +30,9 @@
   max-height: 150px;
   max-width: 150px;
   height: 100%;
-  width: 100%;
+  width: 10vw;
   margin: 20px;
+}
+.name {
+  font-size: 3vw;
 }
