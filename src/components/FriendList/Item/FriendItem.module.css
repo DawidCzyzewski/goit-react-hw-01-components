@@ -5,6 +5,8 @@
   padding: 10px;
   list-style: none;
   border: 1px solid black;
+  width: 50vw;
+  max-width: 600px;
 }
 .online {
   width: 10px;
@@ -21,6 +23,9 @@
   margin: 15px;
 }
 .avatar {
-  width: 20vh;
+  max-height: 150px;
+  max-width: 150px;
+  height: 100%;
+  width: 100%;
   margin: 20px;
 }

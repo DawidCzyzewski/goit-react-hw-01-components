@@ -5,14 +5,13 @@ import css from './Profile.module.css';
 // Import components
 import { UserInfo } from './Components/UserInfo';
 import { ProfileInfo } from './Components/ProfileInfo';
-import { ProfileImage } from './Components/ProfileImage';
 
 // create template for data from output:
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <div className={css.profile}>
       <div className={css.description}>
-        <ProfileImage image={avatar} />
+        <img src={avatar} alt="User avatar" className={css.avatar} />
         <UserInfo username={username} tag={tag} location={location} />
       </div>
 
@@ -23,8 +22,14 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
   );
 };
 
+// Default image if no data from backend
+Profile.defaultProps = {
+  image: 'https://cdn-icons-png.flaticon.com/512/1077/1077114.png',
+};
+
 // Default expected proptypes of data:
 Profile.propTypes = {
+  image: PropTypes.string,
   username: PropTypes.string.isRequired,
   tag: PropTypes.string,
   location: PropTypes.string,

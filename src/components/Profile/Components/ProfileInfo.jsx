@@ -25,7 +25,9 @@ export const ProfileInfo = ({ stats }) => {
 
 // Expected types of props
 ProfileInfo.propTypes = {
-  followers: PropTypes.number,
-  views: PropTypes.number,
-  likes: PropTypes.number,
+  stats: PropTypes.exact({
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
+  }),
 };
