@@ -22,11 +22,7 @@ FriendItem.defaultProps = {
 
 // add expected propTypes
 FriendItem.propTypes = {
-  friend: PropTypes(
-    PropTypes.exact({
-      isOnline: PropTypes.bool,
-      avatar: PropTypes.string,
-      name: PropTypes.string,
-    })
-  ),
+  isOnline: PropTypes.bool,
+  avatar: PropTypes.string,
+  name: PropTypes.string,
 };
